@@ -6,21 +6,27 @@ let mess = document.getElementById("message")
 
 let ancien = document.getElementById("ancien")
 
-let tentative = 0
+let tentative = 1
 
 function comparer() {
     let input = document.getElementById("input").value
     if (input == nbtoguess) {
-        mess.innerText = `Bravo tu as trouvé en ${tentative} de tentative(s) !`
+        if(tentative == 1){
+            mess.innerText = "Bravo tu as réussis à la première tentative !"
+        }else {
+            mess.innerText = `Bravo tu as trouvé en ${tentative} de tentatives !`
+        }
+        
     } else if (input < nbtoguess) {
         mess.innerText = "C'est un nombre plus grand ! "
         ancien.innerText += input + ` ; `
-        input = "0-20"
     } else if (input > nbtoguess){
         mess.innerText = "C'est un nombre plus petit !"
         ancien.innerText += input + ` ; `
-        input = "0-20"
+    } else {
+        mess.innerText = "Entrer une valeur correct !"
     }
+    document.getElementById('input').value = "" 
 }
 send.addEventListener("click", function () {
     comparer(input)
