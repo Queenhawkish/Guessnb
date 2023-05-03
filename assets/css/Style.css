@@ -1,0 +1,29 @@
+*{
+    text-align: center;
+}
+.title{
+    font-size: 4em;
+    text-decoration: underline;
+    color: red;
+    font-weight: 600;
+}
+
+.i{
+    margin-top: 2em;
+    font-size: 3em;
+    width: 4em;
+}
+
+.send{
+    margin-top: 2em;
+    font-size: 2em;
+    background-color: cornflowerblue;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: rgb(67, 97, 153);
+    cursor: pointer;
+}
+
