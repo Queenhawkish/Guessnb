@@ -15,9 +15,11 @@ function comparer() {
     } else if (input < nbtoguess) {
         mess.innerText = "C'est un nombre plus grand ! "
         ancien.innerText += input + ` ; `
+        input = "0-20"
     } else if (input > nbtoguess){
         mess.innerText = "C'est un nombre plus petit !"
         ancien.innerText += input + ` ; `
+        input = "0-20"
     }
 }
 send.addEventListener("click", function () {
