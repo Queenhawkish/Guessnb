@@ -11,12 +11,12 @@ let tentative = 0
 function comparer() {
     let input = document.getElementById("input").value
     if (input == nbtoguess) {
-        mess.innerText = `Bravo tu as trouvé en ${tentative} de tentative(s)`
+        mess.innerText = `Bravo tu as trouvé en ${tentative} de tentative(s) !`
     } else if (input < nbtoguess) {
-        mess.innerText = "C'est un nombre plus grand"
+        mess.innerText = "C'est un nombre plus grand ! "
         ancien.innerText += input + ` ; `
     } else if (input > nbtoguess){
-        mess.innerText = "C'est un nombre plus petit"
+        mess.innerText = "C'est un nombre plus petit !"
         ancien.innerText += input + ` ; `
     }
 }
